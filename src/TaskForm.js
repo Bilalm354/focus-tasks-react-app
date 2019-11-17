@@ -6,7 +6,7 @@ const TaskForm = ({saveTask}) => {
         <form action="" onSubmit={(event) => {
             event.preventDefault();
             saveToDo(value);
-        }};
+        }}
         >
             <input type="text" placeholder="Add Task" margin="normal" />
         </form>

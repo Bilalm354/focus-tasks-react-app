@@ -8,7 +8,11 @@ class Tasks extends Component {
     
 
     render() {
-        return <div>hi</div>
+        return (
+        <div>
+            <h2>Tasks</h2>
+        </div>
+        )
     }
 };
 
