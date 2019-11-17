@@ -10,6 +10,7 @@ class Timer extends Component {
         timerTime: 0, 
         completedTimers: 0,
         currentTimer:'',
+        currentTask:'Tidy up'
     }
 
     startWorkTimer = () =>{
@@ -85,6 +86,7 @@ class Timer extends Component {
         clearInterval(this.timer);
         this.setState({
             timerOn: false,
+            currentTimer:''
         });
     }
 
@@ -96,27 +98,29 @@ class Timer extends Component {
 
 
     render() {
-    const {timerTime, completedTimers, currentTimer} = this.state;
+    const {timerTime, completedTimers, currentTimer, currentTask} = this.state;
     let seconds = ("0"+(timerTime%60)).slice(-2);
     let minutes = ("0"+(Math.floor(timerTime/60))%60).slice(-2);
 
     return(
         <div className="Timer">
             <div className="Timer-header">
-                <h2>Timer</h2>
-                <h3>{currentTimer}</h3>
+                <h2>{currentTask}</h2>
             </div>
             <div className="Timer-time">
                 <h4>{minutes} : {seconds}</h4>
-            </div>
-            <div className="Completed Timers">
-                Completed Work Timers Today: {completedTimers}
             </div>
             <div className="Timer-buttons">
                 <button onClick={this.startWorkTimer}>Start Working</button>
                 <button onClick={this.startShortBreak}>Start short break</button>
                 <button onClick={this.startLongBreak}>Start long break</button>
                 <button onClick={this.stopTimer}>Stop</button>
+            </div>
+            <div className="Completed Timers">
+                Completed Work Timers Today: {completedTimers}
+                <div>
+                {'O '.repeat(completedTimers)}
+                </div>
             </div>
         </div>
     )}
