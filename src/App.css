@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -9,3 +15,39 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.Tasks {
+  width: 80%;
+}
+
+ul{
+  list-style: none;
+  width: 100%;
+}
+
+li{
+  font-size: 0.8em;
+  border-radius: 0.5em;
+  width: 100%;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  text-align: left;
+  background: gray;
+}
+
+input {
+  background: none;
+  color: white;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 0.8em;
+  border-radius: 0.5em;
+}
+
+button {
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 0.5em;
+}
+
+input:focus { outline: none; }

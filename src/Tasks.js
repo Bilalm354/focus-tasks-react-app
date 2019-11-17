@@ -1,19 +1,13 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.css';
 
-class Tasks extends Component {
-    state = {
+const Tasks = props => (
+    <ul>
+        {
+            props.items.map((item, index) => <li key={index}>{item}</li>)
+        }
+    </ul>
 
-    }
-    
-
-    render() {
-        return (
-        <div>
-            <h2>Tasks</h2>
-        </div>
-        )
-    }
-};
+)
 
 export default Tasks;
