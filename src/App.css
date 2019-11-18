@@ -4,11 +4,9 @@
   box-sizing: border-box;
 }
 
-
-
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: #081B33;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,9 +16,6 @@
   color: white;
 }
 
-.container {
-  width: 80%;
-}
 
 ul{
   list-style: none;
@@ -34,39 +29,32 @@ li{
   padding: 0.5em;
   margin: 0.5em 0;
   text-align: left;
-  background: gray;
+  background:#152642;
 }
 
 input {
-  background: none;
+  background: #152642;
   color: white;
   width: 100%;
   padding: 0.5em;
   border-radius: 0.5em;
 }
 
-.Timer{
-  border: 1px solid white;
-  width: 100%;
-}
 
-.Timer-buttons {
-  width: 100%;
-  border: 1px solid red;
-}
+
+
 
 button {
   padding: 0.5em;
   border-radius: 0.5em;
-  background: black;
+  background:  #2F4562;
   color: orange;
   display: inline-flex;
-  justify-content: space-evenly;
   width: 20%;
 }
 
 button:hover {
-  background: darkblue;
+  background: #152642;
 }
 
 input:focus { outline: none; }

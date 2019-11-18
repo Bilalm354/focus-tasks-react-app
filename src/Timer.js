@@ -119,7 +119,7 @@ class Timer extends Component {
             <div className="Completed Timers">
                 Completed Work Timers Today: {completedTimers}
                 <div>
-                {'O '.repeat(completedTimers)}
+                    {'O '.repeat(completedTimers)}
                 </div>
             </div>
         </div>
