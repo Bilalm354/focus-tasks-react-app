@@ -82,9 +82,25 @@ input {
 input:focus { outline: none; }
 
 @media only screen and (max-width: 600px) {
+  *{
+    font-size: 14px;
+  }
   .Timer-buttons-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+  }
+
+  .Timer-btn {
+    margin: 0.5em;
+  }
+
+  .items {
+    height: 20vh;
+    overflow: scroll;
+  }
+  .App-header{
+    display: none;
   }
 }
