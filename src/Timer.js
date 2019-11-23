@@ -98,7 +98,7 @@ class Timer extends Component {
 
 
     render() {
-    const {timerTime, completedTimers, currentTimer, currentTask} = this.state;
+    const {timerTime, completedTimers, currentTask} = this.state;
     let seconds = ("0"+(timerTime%60)).slice(-2);
     let minutes = ("0"+(Math.floor(timerTime/60))%60).slice(-2);
 
@@ -110,16 +110,17 @@ class Timer extends Component {
             <div className="Timer-time">
                 <h4>{minutes} : {seconds}</h4>
             </div>
-            <div className="Timer-buttons">
-                <button onClick={this.startWorkTimer}>Start Working</button>
-                <button onClick={this.startShortBreak}>Start short break</button>
-                <button onClick={this.startLongBreak}>Start long break</button>
-                <button onClick={this.stopTimer}>Stop</button>
+            <div className="Timer-buttons-container">
+                {!this.state.timerOn && <button onClick={this.startWorkTimer} className="Timer-btn start-btn">Start Working</button>}
+                {!this.state.timerOn && <button onClick={this.startShortBreak} className="Timer-btn start-btn">Start short break</button>}
+                {!this.state.timerOn && <button onClick={this.startLongBreak} className="Timer-btn start-btn">Start long break</button>}
+                {this.state.timerOn && <button onClick={this.stopTimer} className="Timer-btn stop-btn" >Stop</button>} 
+                {/* only see stop button if timer is on */}
             </div>
             <div className="Completed Timers">
                 Completed Work Timers Today: {completedTimers}
                 <div>
-                    {'O '.repeat(completedTimers)}
+                    {'✅'.repeat(completedTimers)}
                 </div>
             </div>
         </div>

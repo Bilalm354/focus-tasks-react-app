@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   constructor(props){
     super(props);
+    
     this.state={
       term:'',
       items:[]
@@ -25,8 +26,6 @@ class App extends Component {
       items: [...this.state.items, this.state.term]
     });
   }
-
-
 
   render() {
     return (

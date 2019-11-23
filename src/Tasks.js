@@ -4,7 +4,7 @@ import './App.css';
 const Tasks = props => (
     <ul>
         {
-            props.items.map((item, index) => <li key={index}>{item}</li>)
+            props.items.map((item, index) => <li key={index}>{item}<button onClick={props.deleteTask}>x</button></li>)
         }
     </ul>
 

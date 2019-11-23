@@ -1,5 +1,5 @@
 * {
-  /* margin: 0; */
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -16,7 +16,6 @@
   color: white;
 }
 
-
 ul{
   list-style: none;
   width: 100%;
@@ -32,6 +31,10 @@ li{
   background:#152642;
 }
 
+li:hover { 
+  background: #2F4562;
+}
+
 input {
   background: #152642;
   color: white;
@@ -40,21 +43,31 @@ input {
   border-radius: 0.5em;
 }
 
+.Timer-buttons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: space-evenly;
+}
 
-
-
-
-button {
+.Timer-btn {
   padding: 0.5em;
   border-radius: 0.5em;
-  background:  #2F4562;
-  color: orange;
-  display: inline-flex;
-  width: 20%;
+  color: white;
+  width: 12em;
 }
 
-button:hover {
-  background: #152642;
+.start-btn{
+  background:  #152642 ;
 }
+
+.stop-btn {
+  background:#ff6961;
+}
+
+.start-btn:hover {
+  background:  #2F4562;
+}
+
 
 input:focus { outline: none; }
