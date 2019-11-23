@@ -56,7 +56,6 @@ input {
 .Timer-buttons-container{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   justify-content: space-evenly;
 }
 
@@ -81,3 +80,11 @@ input {
 
 
 input:focus { outline: none; }
+
+@media only screen and (max-width: 600px) {
+  .Timer-buttons-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
