@@ -8,13 +8,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 class App extends Component {
   constructor(props){
     super(props);
-    
     this.state={
       term:'',
-      items:[]
+      items:[],
     };
   }
-  
+
   onChange = (event) => {
     this.setState({ term: event.target.value });
   }
@@ -43,7 +42,9 @@ class App extends Component {
             <form onSubmit={this.onSubmit}>
               <input value={this.state.term} onChange={this.onChange} placeholder="Task"/>
             </form>
-            <Tasks items={this.state.items}/>
+            <div className="items">
+              <Tasks items={this.state.items}/>
+            </div>
           </div>
           <br/>
           <div className = "Timer">

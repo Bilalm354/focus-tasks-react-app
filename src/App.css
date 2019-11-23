@@ -4,16 +4,26 @@
   box-sizing: border-box;
 }
 
+
 .App {
   text-align: center;
   background-color: #081B33;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-header{
+  margin-bottom: 0.5em;
+}
+
+.items {
+  height: 40vh;
+  overflow: scroll;
 }
 
 ul{

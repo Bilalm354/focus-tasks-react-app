@@ -9,8 +9,7 @@ class Timer extends Component {
         longBreak: 15*60, // 15 minutes * 60 seconds
         timerTime: 0, 
         completedTimers: 0,
-        currentTimer:'',
-        currentTask:'Tidy up'
+        currentTimer:'Start timer!',
     }
 
     startWorkTimer = () =>{
@@ -86,7 +85,7 @@ class Timer extends Component {
         clearInterval(this.timer);
         this.setState({
             timerOn: false,
-            currentTimer:''
+            currentTimer:'Stoped'
         });
     }
 
@@ -98,14 +97,14 @@ class Timer extends Component {
 
 
     render() {
-    const {timerTime, completedTimers, currentTask} = this.state;
+    const {timerTime, completedTimers, currentTimer} = this.state;
     let seconds = ("0"+(timerTime%60)).slice(-2);
     let minutes = ("0"+(Math.floor(timerTime/60))%60).slice(-2);
 
     return(
         <div className="Timer">
             <div className="Timer-header">
-                <h2>{currentTask}</h2>
+                <h2>{currentTimer}</h2>
             </div>
             <div className="Timer-time">
                 <h4>{minutes} : {seconds}</h4>
@@ -117,6 +116,7 @@ class Timer extends Component {
                 {this.state.timerOn && <button onClick={this.stopTimer} className="Timer-btn stop-btn" >Stop</button>} 
                 {/* only see stop button if timer is on */}
             </div>
+            <br />
             <div className="Completed Timers">
                 Completed Work Timers Today: {completedTimers}
                 <div>
